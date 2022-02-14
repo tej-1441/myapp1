@@ -12,14 +12,13 @@ function Outer() {
     
     const handleChange=(event)=>{
         setPassword(event.target.value);
-        // console.log(password);
     }
 
    const handleClick=()=>{
      if(password===exactpassword)
      {
-         setTimeout(setIsfade(true),5000);
-         setTimeout(navigate('/inner'),2000);
+         setIsfade(true);
+         navigate('/inner');
            
        }
        else

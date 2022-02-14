@@ -80,6 +80,10 @@ const App = () => {
             user:timer,
             remaining:remaining-1
         })
+        if(timer==0)
+        {
+            alert("your session expired");
+        }
     },[timer])
 
     useEffect(() => {
