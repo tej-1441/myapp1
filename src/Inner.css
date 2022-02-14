@@ -1,0 +1,22 @@
+.inner{
+    background-color: #111;
+    color: white;
+    height:650px;
+    padding: 50px;
+}
+
+.inner__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    margin: auto auto;
+}
+
+.inner__timer{
+    margin-bottom: 20px;
+}
+
+.inner__button{
+    width: 100px;
+}
