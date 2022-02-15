@@ -80,7 +80,7 @@ const App = () => {
             user:timer,
             remaining:remaining-1
         })
-        if(timer==0)
+        if(remaining===-1)
         {
             alert("your session expired");
         }

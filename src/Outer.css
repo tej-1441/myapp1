@@ -6,9 +6,9 @@
 }
 .div1,
 .div2{
-   flex:0.5;
+   flex:0.50;
    height: 650px;
-   background-color: #111;
+   /* background-color: gold; */
    z-index: -1;
 }
 .div1{
@@ -19,13 +19,21 @@
 }
 .div11{
     height: 650px;
+    width: 100%;
     border:3px solid #4CB4BE;
+    background-color: #111;
+    position: relative;
+    left: 0;
 }
 .div21{
     height: 650px;
+    width: 100%;
     border:3px solid #4CB4BE;
+    background-color: #111;
     color:#68e4ed;
-    display: flex;
+    position: relative;
+    right:0;
+    display: flex;  
 }
 .timer{
     margin: auto 50%;
@@ -44,7 +52,9 @@
     width: 450px;
     background-color:#111;
     color: #fff;
-}
+    transition: all 2s;
+    transition-timing-function: ease-in;
+}    
 .data__image{
     width: 150px;
     height: 150px;
@@ -67,9 +77,37 @@
     width: 150px;
     height: 40px;
 }
-.fadeout{
-    opacity: 0;
-    width: 0;
-    height: 0;
-    transition: width 5s 5s,height 5s 5s,opacity 5s;
+.div11.fadeout1{
+    animation: slidebox1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+.div21.fadeout2{
+    height: 100%;
+    animation: slidebox2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+@keyframes slidebox1 {
+    from{
+       left: 0;
+    }
+    to{
+        left: -100%;
+        opacity: 0;
+    }
+}
+@keyframes slidebox2 {
+    from{
+        right:0%;
+    }
+    to{
+        right:-100%;
+        opacity: 0;
+    }
+}
+
+.data__feild.torotate{
+transform: rotate(360deg);
+opacity: 0;
 }
